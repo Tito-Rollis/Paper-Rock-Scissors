@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --h1: bold 30px 'Bebas Neue', cursive;
+    --p: 600 30px 'Montserrat', 'sans-serif';
+}
+
+.container-fluid {
+    background-color: #9C835F;
+    padding-bottom: 25px;
+    padding-top: 2%;
+    box-sizing: border-box;
+}
+
+/* HEADER STYLING */
+header {
+    width: 30%;
+    margin-left: 2%;
+    margin-bottom: 3%;
+}
+
+.logo {
+    background-image: url(assets/img/logo\ 1.png);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+.left-arrow {
+    width: 20px;
+    height: 20px;
+    background-image: url(assets/img/_.png);
+    background-size: cover;
+}
+
+.d-flex h1 {
+    font: var(--h1);
+    color: #F9B23D;
+    margin-bottom: 0;
+    letter-spacing: 0.1em;
+}
+
+/* MAIN STYLING */
+/* PLAYER STYLING*/
+.player {
+    font: var(--p);
+    letter-spacing: 0.1em;
+    width: 200px;
+    height: 420px;
+}
+
+.player-rock {
+    background-image: url(assets/img/batu.png);
+
+}
+
+/* STATUS STYLING */
+.status {
+    width: 20%;
+}
+
+.vs {
+    font: 700 80px 'Montserrat', 'sans-serif';
+    color: #BD0000;
+    letter-spacing: 0.1em;
+}
+
+.status .player-win {
+    width: 80%;
+    border-radius: 10px;
+    font: 600 30px 'Montserrat', 'sans-serif';
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #4C9654;
+    transform: rotate(-28.87deg);
+
+}
+
+.player-win p {
+    margin-bottom: 0;
+    letter-spacing: 0.1em;
+}
+
+.com-win {
+    width: 80%;
+    border-radius: 10px;
+    font: 600 30px 'Montserrat', 'sans-serif';
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #4C9654;
+    transform: rotate(-28.87deg);
+}
+
+.com-win p {
+    margin-bottom: 0;
+    letter-spacing: 0.1em;
+}
+
+.draw {
+    width: 80%;
+    height: 120px;
+    border-radius: 10px;
+    font: 600 30px 'Montserrat', 'sans-serif';
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #035B0C;
+    transform: rotate(-28.87deg);
+}
+
+.draw p {
+    margin-bottom: 0;
+    letter-spacing: 0.1em;
+}
+
+/* COM STYLING */
+.com {
+    font: var(--p);
+    letter-spacing: 0.1em;
+    width: 200px;
+    height: 410px;
+}
+
+/* WINNER */
+.winner {
+    /* background-color: #C4C4C4; */
+    width: 70%;
+    height: 35%;
+    border-radius: 30px;
+}
+
+.winner-color {
+    background-color: #C4C4C4;
+}
+
+/* REFRESH */

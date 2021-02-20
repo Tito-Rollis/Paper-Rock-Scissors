@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper, Rock, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- HEADER -->
+        <header class="d-flex align-items-center justify-content-between">
+            <div class="left-arrow"></div>
+            <div class="logo"></div>
+            <h1>ROCK PAPER SCISSORS</h1>
+        </header>
+        <!-- MAIN -->
+        <div class="d-flex justify-content-center">
+            <div class="player d-flex flex-column align-items-center justify-content-between">
+                <p>PLAYER 1</p>
+                <div class="winner d-flex align-items-center justify-content-center"><img src="assets/img/batu.png" width="60px" id="player-rock"></div>
+                <div class="winner d-flex align-items-center justify-content-center"><img src="assets/img/kertas.png" width="60px" id="player-paper"></div>
+                <div class="winner d-flex align-items-center justify-content-center"><img src="assets/img/gunting.png" width="60px" id="player-scissors"></div>
+            </div>
+            <!-- STATUS -->
+            <div class="status d-flex align-items-center justify-content-center">
+                <h2 class="vs d-none">VS</h2>
+                <div class="d-none player-win d-flex align-items-center justify-content-center">
+                    <p>PLAYER 1 WIN</p>
+                </div>
+                <div class="d-none com-win d-flex align-items-center justify-content-center">
+                    <p>COM <br>WIN</p>
+                </div>
+                <div class="draw d-flex align-items-center justify-content-center">
+                    <p>DRAW</p>
+                </div>
+            </div>
+            <div class="com d-flex flex-column align-items-center justify-content-between">
+                <p>COM</p>
+                <div class="winner d-flex align-items-center justify-content-center"><img src="assets/img/batu.png" width="60px" id="com-rock"></div>
+                <div class="winner d-flex align-items-center justify-content-center"><img src="assets/img/kertas.png" width="60px" id="com-paper"></div>
+                <div class="winner d-flex align-items-center justify-content-center"><img src="assets/img/gunting.png" width="60px" id="com-scissors"></div>
+            </div>
+        </div>
+        <!-- REFRESH -->
+        <div class="container-fluid d-flex justify-content-center refresh">
+            <img src="assets/img/refresh.png" width="60px">
+        </div>
+    </div>
+</body>
+</html>
