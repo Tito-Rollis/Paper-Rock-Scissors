@@ -15,7 +15,7 @@
 
 /* HEADER STYLING */
 header {
-    width: 30%;
+    width: 50%;
     margin-left: 2%;
     margin-bottom: 3%;
 }
@@ -25,6 +25,7 @@ header {
     background-size: cover;
     width: 40px;
     height: 40px;
+    margin-right: 2%;
 }
 
 .left-arrow {
@@ -32,6 +33,7 @@ header {
     height: 20px;
     background-image: url(assets/img/_.png);
     background-size: cover;
+    margin-right: 2%;
 }
 
 .d-flex h1 {
@@ -42,6 +44,11 @@ header {
 }
 
 /* MAIN STYLING */
+.player img,
+.refresh img {
+    cursor: pointer;
+}
+
 /* PLAYER STYLING*/
 .player {
     font: var(--p);
@@ -66,7 +73,8 @@ header {
     letter-spacing: 0.1em;
 }
 
-.status .player-win {
+.status .player-win,
+.status .com-win {
     width: 80%;
     border-radius: 10px;
     font: 600 30px 'Montserrat', 'sans-serif';
@@ -85,15 +93,7 @@ header {
 }
 
 .com-win {
-    width: 80%;
-    border-radius: 10px;
-    font: 600 30px 'Montserrat', 'sans-serif';
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    color: #fff;
-    background-color: #4C9654;
-    transform: rotate(-28.87deg);
+    padding: 20px !important;
 }
 
 .com-win p {
@@ -139,4 +139,55 @@ header {
     background-color: #C4C4C4;
 }
 
-/* REFRESH */
+/* MEDIA QUERY */
+/* TABLETS */
+@media (max-width: 991px) {
+    header {
+        width: 80%;
+    }
+
+    .logo,
+    .left-arrow {
+        margin-right: 2%;
+    }
+
+    .d-flex h1 {
+        font: var(--h1);
+        color: #F9B23D;
+        margin-bottom: 0;
+        letter-spacing: 0.1em;
+    }
+
+    .refresh {
+        padding-bottom: 20vh;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+    header {
+        width: 80%;
+        margin: 2% auto;
+    }
+
+    .logo,
+    .left-arrow {
+        margin-right: 5%;
+    }
+
+    .refresh {
+        padding-bottom: 8.7vh;
+    }
+
+    .player,
+    .com {
+        font-size: 1.3em;
+        margin-top: 6%;
+    }
+
+    .status .player-win,
+    .status .com-win {
+        width: 100%;
+        font-size: 1.5em;
+    }
+}

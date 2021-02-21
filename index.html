@@ -11,18 +11,19 @@
 <body>
     <div class="container-fluid">
         <!-- HEADER -->
-        <header class="d-flex align-items-center justify-content-between">
+        <header class="d-flex align-items-center justify-content-lg-start justify-content-md-start justify-content-sm-center">
             <div class="left-arrow"></div>
             <div class="logo"></div>
             <h1>ROCK PAPER SCISSORS</h1>
         </header>
         <!-- MAIN -->
         <div class="d-flex justify-content-center">
+            <!-- PLAYER -->
             <div class="player d-flex flex-column align-items-center justify-content-between">
                 <p>PLAYER 1</p>
-                <div class="winner d-flex align-items-center justify-content-center"><img src="assets/img/batu.png" width="60px" id="player-rock"></div>
-                <div class="winner d-flex align-items-center justify-content-center"><img src="assets/img/kertas.png" width="60px" id="player-paper"></div>
-                <div class="winner d-flex align-items-center justify-content-center"><img src="assets/img/gunting.png" width="60px" id="player-scissors"></div>
+                <div id='player-rock' class="winner d-flex align-items-center justify-content-center"><img src="assets/img/batu.png" width="60px" id="player-rock"></div>
+                <div id='player-paper' class="winner d-flex align-items-center justify-content-center"><img src="assets/img/kertas.png" width="60px" id="player-paper"></div>
+                <div id='player-scissors' class="winner d-flex align-items-center justify-content-center"><img src="assets/img/gunting.png" width="60px" id="player-scissors"></div>
             </div>
             <!-- STATUS -->
             <div class="status d-flex align-items-center justify-content-center">
@@ -30,13 +31,14 @@
                 <div class="d-none player-win d-flex align-items-center justify-content-center">
                     <p>PLAYER 1 WIN</p>
                 </div>
-                <div class="d-none com-win d-flex align-items-center justify-content-center">
+                <div class="com-win d-flex align-items-center justify-content-center">
                     <p>COM <br>WIN</p>
                 </div>
-                <div class="draw d-flex align-items-center justify-content-center">
+                <div class="draw d-none d-flex align-items-center justify-content-center">
                     <p>DRAW</p>
                 </div>
             </div>
+            <!-- COMPUTER -->
             <div class="com d-flex flex-column align-items-center justify-content-between">
                 <p>COM</p>
                 <div class="winner d-flex align-items-center justify-content-center"><img src="assets/img/batu.png" width="60px" id="com-rock"></div>
@@ -49,5 +51,6 @@
             <img src="assets/img/refresh.png" width="60px">
         </div>
     </div>
+<script src="script.js"></script>
 </body>
 </html>
