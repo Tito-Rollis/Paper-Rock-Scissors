@@ -133,6 +133,7 @@ header {
     width: 70%;
     height: 35%;
     border-radius: 30px;
+    transition: all 0.2s;
 }
 
 .winner-color {
