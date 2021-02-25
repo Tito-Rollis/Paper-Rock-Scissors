@@ -4,7 +4,6 @@ let draw = document.querySelector('.draw');
 let player_win = document.querySelector('.player-win');
 let com_win = document.querySelector('.com-win');
 let result = document.querySelectorAll('.result');
-let players = document.querySelectorAll('[id|=player]');
 let coms = document.querySelectorAll('[id|=com]');
 
 class Hands{
@@ -23,14 +22,13 @@ let p = new Hands('player');
 let c = new Hands('com');
 let d = new Rslt('draw');
 console.log(p.id)
-console.log(c.id[0])
 
 // ARRAYS
 let status = [draw, player_win, com_win];
 let computer = ['rock','paper','scissors']
 
 // PLAYER'S TARGET'
-players.forEach((n)=>
+p.id.forEach((n)=>
 {
     n.addEventListener('click', () => 
 {
