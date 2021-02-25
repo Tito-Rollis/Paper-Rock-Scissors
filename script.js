@@ -23,8 +23,7 @@ let p = new Hands('player');
 let c = new Hands('com');
 let d = new Rslt('draw');
 console.log(p.id)
-console.log(c.id)
-console.log(d)
+console.log(c.id[0])
 
 // ARRAYS
 let status = [draw, player_win, com_win];
