@@ -3,9 +3,29 @@ let vs = document.querySelector('.vs');
 let draw = document.querySelector('.draw');
 let player_win = document.querySelector('.player-win');
 let com_win = document.querySelector('.com-win');
-let players = document.querySelectorAll('[id|=player]');
 let result = document.querySelectorAll('.result');
+let players = document.querySelectorAll('[id|=player]');
 let coms = document.querySelectorAll('[id|=com]');
+
+class Hands{
+    constructor(id){
+        this.id = document.querySelectorAll(`[id|=${id}]`);
+    }  
+}
+
+class Rslt{
+    constructor(id){
+        this.id = document.querySelector(`.${id}`);
+    }
+}
+
+let p = new Hands('player');
+let c = new Hands('com');
+let d = new Rslt('draw');
+console.log(p.id)
+console.log(c.id)
+console.log(d)
+
 // ARRAYS
 let status = [draw, player_win, com_win];
 let computer = ['rock','paper','scissors']
