@@ -16,12 +16,16 @@ class Rslt{
     constructor(id){
         this.id = document.querySelectorAll(`.${id}`);
     }
+
+    dis(hands,randomNumber,fnDisplay){
+        randomNumber === hands ? fnDisplay(d.id[0]) : fnDisplay(com_win)
+    }
 }
 
 let p = new Hands('player');
 let c = new Hands('com');
 let d = new Rslt('result');
-console.log(c)
+console.log(d.id[1])
 
 // ARRAYS
 let status = [draw, player_win, com_win];
@@ -50,16 +54,16 @@ p.id.forEach((n,index)=> n.addEventListener('click', () =>
     getStatus.classList.add('winner-color');
 
     if(index === com) return display(draw);
-    if(index === 0) return com === 2 ? display(player_win) : display(com_win);
-    if(index === 1) return com === 0 ? display(player_win) : display(com_win);
-    if(index === 2) return com === 1 ? display(player_win) : display(com_win);
+    if(index === 0) return d.dis(2,com,display);
+    if(index === 1) return d.dis(0,com,display);
+    if(index === 2) return d.dis(1,com,display);
 }))
 
 // REFRESH
 let refresh = document.querySelector('.refresh').addEventListener('click',()=>
 {
     if(vs.classList.contains('d-none')) vs.classList.remove('d-none');
-    result.forEach((n)=>n.classList.add('d-none'));
+    d.id.forEach((n)=>n.classList.add('d-none'));
     p.id.forEach((n)=>n.classList.remove('winner-color'));
     c.id.forEach((n)=>n.classList.remove('winner-color'))
 })
