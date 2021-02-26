@@ -14,25 +14,25 @@ class Hands{
 
 class Rslt{
     constructor(id){
-        this.id = document.querySelector(`.${id}`);
+        this.id = document.querySelectorAll(`.${id}`);
     }
 }
 
 let p = new Hands('player');
 let c = new Hands('com');
-let d = new Rslt('draw');
-console.log(p.id)
+let d = new Rslt('result');
+console.log(c)
 
 // ARRAYS
 let status = [draw, player_win, com_win];
 let computer = ['rock','paper','scissors']
 
 // PLAYER'S TARGET'
-p.id.forEach((n)=>
+p.id.forEach((n,index)=>
 {
     n.addEventListener('click', () => 
 {
-    // GET CURRENT ELEMENT
+    // GET THE NAME OF HANDS
     let target = n.id;
     let getId = document.getElementById(`${target}`);
     // DISPLAY USER'S CHOICE LOG IN TERMINAL
@@ -46,15 +46,15 @@ p.id.forEach((n)=>
                     {
                         if(val === n) val.classList.remove('d-none')
                     })
-    let com = computer[Math.floor(Math.random()*3)];
+    let com = [Math.floor(Math.random()*3)];
 
-    let getStatus = document.getElementById(`com-${com}`)
+    let getStatus = c.id[com];
     getStatus.classList.add('winner-color');
 
-    if(target === `player-${com}`) return display(draw);
-    if(target === `player-rock`) return com === 'scissors' ? display(player_win) : display(com_win);
-    if(target === `player-paper`) return com === 'rock' ? display(player_win) : display(com_win);
-    if(target === `player-scissors`) return com === 'paper' ? display(player_win) : display(com_win);
+    if(index === [com]) return display(draw);
+    if(index === 0) return com === 2 ? display(player_win) : display(com_win);
+    if(index === 1) return com === 0 ? display(player_win) : display(com_win);
+    if(index === 2) return com === 1 ? display(player_win) : display(com_win);
 });
 })
 
