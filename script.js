@@ -28,9 +28,7 @@ let status = [draw, player_win, com_win];
 let computer = ['rock','paper','scissors']
 
 // PLAYER'S TARGET'
-p.id.forEach((n,index)=>
-{
-    n.addEventListener('click', () => 
+p.id.forEach((n,index)=> n.addEventListener('click', () => 
 {
     // GET THE NAME OF HANDS
     let target = n.id;
@@ -46,23 +44,22 @@ p.id.forEach((n,index)=>
                     {
                         if(val === n) val.classList.remove('d-none')
                     })
-    let com = [Math.floor(Math.random()*3)];
-
+    let com = Math.floor(Math.random()*3);
+    console.log(com,index)
     let getStatus = c.id[com];
     getStatus.classList.add('winner-color');
 
-    if(index === [com]) return display(draw);
+    if(index === com) return display(draw);
     if(index === 0) return com === 2 ? display(player_win) : display(com_win);
     if(index === 1) return com === 0 ? display(player_win) : display(com_win);
     if(index === 2) return com === 1 ? display(player_win) : display(com_win);
-});
-})
+}))
 
 // REFRESH
 let refresh = document.querySelector('.refresh').addEventListener('click',()=>
 {
     if(vs.classList.contains('d-none')) vs.classList.remove('d-none');
     result.forEach((n)=>n.classList.add('d-none'));
-    players.forEach((n)=>n.classList.remove('winner-color'));
-    coms.forEach((n)=>n.classList.remove('winner-color'))
+    p.id.forEach((n)=>n.classList.remove('winner-color'));
+    c.id.forEach((n)=>n.classList.remove('winner-color'))
 })
