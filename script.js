@@ -10,7 +10,7 @@ class Rslt{
     }
 
     dis(hands,randomNumber,fnDisplay){
-        randomNumber === hands ? fnDisplay(display.id[0]) : fnDisplay(display.id[1])
+        randomNumber === hands ? fnDisplay(this.id[0]) : fnDisplay(this.id[1])
     }
 }
 
