@@ -10,8 +10,7 @@ class Rslt{
     }
 
     dis(hands,randomNumber,fnDisplay){
-        // randomNumber === hands ? fnDisplay(this.id[0]) : fnDisplay(this.id[1])
-        console.log(fnDisplay)
+        randomNumber === hands ? fnDisplay(this.id[0]) : fnDisplay(this.id[1])
     }
 }
 
@@ -50,9 +49,9 @@ player.id.forEach((n,index)=> n.addEventListener('click', () =>
     getStatus.classList.add('winner-color');
 
     if(index === com) return noneRemover(display.id[2]);
-    if(index === 0) return display.dis(2,com,display);
-    if(index === 1) return display.dis(0,com,display);
-    if(index === 2) return display.dis(1,com,display);
+    if(index === 0) return display.dis(2,com,noneRemover);
+    if(index === 1) return display.dis(0,com,noneRemover);
+    if(index === 2) return display.dis(1,com,noneRemover);
 }))
 
 // REFRESH
